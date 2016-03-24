@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @link              https://github.com/airroom/hubspot-to-wpml
+ * @link              https://github.com/airroom/hubspot-wpml
  * @since             0.1.0
  * @package           hubspot_wpml
  *
  * @wordpress-plugin
  * Plugin Name:       HubSpot to WPML
- * Plugin URI:        https://github.com/airroom/hubspot-to-wpml
+ * Plugin URI:        https://github.com/airroom/hubspot-wpml
  * Description:       Yay
  * Version:           9.1.0
  * Author:            Romário S. Lima
  * Author URI:        http://github.com/airroom
  * License:           Beerware
- * License URI:       https://github.com/airroom/hubspot-to-wpml/blob/master/LICENSE
- * Text Domain:       hubspot-to-wpml
+ * License URI:       https://github.com/airroom/hubspot-wpml/blob/master/LICENSE
+ * Text Domain:       hubspot-wpml
  * Domain Path:       /languages
  */
 
@@ -25,19 +25,19 @@ if ( ! defined( 'WPINC' ) ) {
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-hubspot-to-wpml-activator.php
+ * This action is documented in includes/class-hubspot-wpml-activator.php
  */
 function activate_hubspot_wpml() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-hubspot-to-wpml-activator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-hubspot-wpml-activator.php';
 	Hubspot_Wpml_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-hubspot-to-wpml-deactivator.php
+ * This action is documented in includes/class-hubspot-wpml-deactivator.php
  */
 function deactivate_hubspot_wpml() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-hubspot-to-wpml-deactivator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-hubspot-wpml-deactivator.php';
 	Hubspot_Wpml_Deactivator::deactivate();
 }
 
@@ -48,7 +48,7 @@ register_deactivation_hook( __FILE__, 'deactivate_hubspot_wpml' );
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-hubspot-to-wpml.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-hubspot-wpml.php';
 
 /**
  * Begins execution of the plugin.

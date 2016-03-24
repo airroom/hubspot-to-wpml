@@ -68,7 +68,7 @@ class Hubspot_Wpml {
 	 */
 	public function __construct() {
 
-		$this->plugin_name = 'hubspot-to-wpml';
+		$this->plugin_name = 'hubspot-wpml';
 		$this->version = '0.1.0';
 
 		$this->load_dependencies();
@@ -100,24 +100,24 @@ class Hubspot_Wpml {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-hubspot-to-wpml-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-hubspot-wpml-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-hubspot-to-wpml-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-hubspot-wpml-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-hubspot-to-wpml-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-hubspot-wpml-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-hubspot-to-wpml-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-hubspot-wpml-public.php';
 
 		$this->loader = new Hubspot_Wpml_Loader();
 
